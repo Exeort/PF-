@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+int highestTemp(int a, int b)
+{
+	if (a > b)
+	    return a;
+	else 
+	    return b;
+}
+
+
+
+int main()
+{
+	int mon, tue, wed, thu, fri, sat, sun, high;
+	
+	cout << "Enter Temperature for Monday (Celcius): ";
+	cin >> mon;
+	cout << "Enter Temperature for Tuesday: ";
+	cin >> tue;
+	cout << "Enter Temperature for Wednesday: ";
+	cin >> wed;
+	cout << "Enter Temperature for Thursday: ";
+	cin >> thu;
+	cout << "Enter Temperature for Friday: ";
+	cin >> fri;
+	cout << "Enter Temperature for Saturday: ";
+	cin >> sat;
+	cout << "Enter Temperature for Sunday: ";
+	cin >> sun;
+	
+	high = highestTemp(mon, tue);
+	high = highestTemp(high, wed);
+	high = highestTemp(high, thu);
+	high = highestTemp(high, fri);
+	high = highestTemp(high, sat);
+	high = highestTemp(high, sun);
+	
+	cout << "The Highest Temperature is " << high << " on ";
+	
+	if (mon == high)
+	    cout << "Monday ";
+	if (tue == high)
+	    cout << "Tuesday ";
+	if (wed == high)
+	    cout << "Wednesday ";
+	if (thu == high)
+	    cout << "Thursday ";
+	if (fri == high)
+	    cout << "Friday ";
+	if (sat == high)
+	    cout << "Saturday ";
+	if (sun == high)
+	    cout << "Sunday ";
+	
+	
+	
+return 0;
+}
