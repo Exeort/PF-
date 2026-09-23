@@ -1,61 +1,60 @@
 #include <iostream>
 using namespace std;
 
+void displayPatient(string namePatient, double agePatient,double timePatient, char category){
+	cout<<"Patient name : "<< name;
+	cout<<"Patient age : "<< age;
+	cout<<"Patient arrive at : "<< time;
+	
+}
 
-rah
-
-
-
-
-int main()
-{
+int main(){
 	string name;
-    double age, time;
-    char category;
-    
-    
-    cout << "Enter Patient's name: ";
-    cin >> name;
-    cout << "Enter Patient's age: ";
-    cin >> age;
-    cout << "Enter Arrival Time (24 hour format/0000): ";
-    cin >> time;
-    cout << "Enter Patient's category (E-Emergency/S-Senior/N-Normal): ";
-    cin >> category;
-   
-    
-    switch (category){
-    	case 'E':
-    		cout << "Your name is " << name << endl;
-    		cout << "Your age is " << age << endl;
-    		cout << "You arrived at " << time << endl;
-    		cout << "Your Queue Category is Emergency" << endl;
-    		cout << "Your Queue number is 1" << endl;
-    		cout << "Priority = Highest"; 
-    		break;
-        case 'S':
-        	cout << "Your name is " << name << endl;
-        	cout << "Your age is " << age << endl;
-        	cout << "You arrived at " << time << endl;
-        	cout << "Your Queue Category is Senior" << endl;
-        	cout << "Your Queue number is 2" << endl;
-        	cout << "Priority = Second";
-        	break;
-        case 'N':
-            cout << "Your name is " << name << endl;
-        	cout << "Your age is " << age << endl;
-        	cout << "You arrived at " << time << endl;
-        	cout << "Your Queue Category is Normal" << endl;
-        	cout << "Your Queue number is 3" << endl;
-        	cout << "Priority = Standard";
-        	break;
-        default:;
-        	cout << "Invalid Category";
-            break;
-        }
-    
-    
-    return 0;
-    
-    
+	double age, time;
+	char category;
+	
+	
+	cout<<"Enter detail of the patient "<<"\n";
+	
+	cout<<"\nEnter patient name : ";
+	cin>>name;
+	
+	cout<<"Enter patient age : ";
+	cin>>age;
+	
+	cout<<"Enter arrival time(24 HOUR FORMAT/00:00) : ";
+	cin>>time;
+	
+	cout<<"Enter patient category(e-Emergency/s-Senior Citizen/n-Normal) : ";
+	cin>>category;
+	
+	switch (category){
+	
+		case 'e':
+			cout<<"Your Queue category is Emergency";
+			cout<<"Your Queue is 1";
+			cout<<"Priority = Highest";
+		break;
+		
+		case 's':
+			cout<<"Your Queue category is Senior Citezen ";
+			cout<<"Your Queue is 2";
+			cout<<"Priority = Standard";
+		break;
+		
+		case 'n':
+			cout<<"Your Queue category is normal ";
+			cout<<"Your Queue is 3";	
+			cout<<"Priority = Lowest";
+		break;
+		
+		default:
+			cout<<"INVALID";
+		break;		
+	}	
+		
+	displayPatient();		
+		
+	
+
 }
