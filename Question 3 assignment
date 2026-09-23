@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
 void displayPatient(string namePatient, double agePatient,double timePatient, char category){
-	cout<<"Patient name : "<< name;
-	cout<<"Patient age : "<< age;
-	cout<<"Patient arrive at : "<< time;
+	cout<<"Patient name : "<< namePatient;
+	cout<<"\nPatient age : "<< agePatient;
+	cout<<"\nPatient arrive at : "<< timePatient;
 	
 }
 
@@ -31,30 +32,32 @@ int main(){
 	switch (category){
 	
 		case 'e':
-			cout<<"Your Queue category is Emergency";
-			cout<<"Your Queue is 1";
-			cout<<"Priority = Highest";
+			cout<<"Category is Emergency";
+			cout<<"\nQueue is 1";
+			cout<<"\nPriority = Highest"<<"\n";
 		break;
 		
 		case 's':
-			cout<<"Your Queue category is Senior Citezen ";
-			cout<<"Your Queue is 2";
-			cout<<"Priority = Standard";
+			cout<<"Category is Senior Citezen ";
+			cout<<"\nQueue is 2";
+			cout<<"\nPriority = Standard"<<"\n";
 		break;
 		
 		case 'n':
-			cout<<"Your Queue category is normal ";
-			cout<<"Your Queue is 3";	
-			cout<<"Priority = Lowest";
+			cout<<"Category is normal ";
+			cout<<"\nQueue is 3";	
+			cout<<"\nPriority = Lowest"<<"\n";
+			
 		break;
 		
 		default:
 			cout<<"INVALID";
 		break;		
 	}	
-		
-	displayPatient();		
-		
+	
+	
+	displayPatient(name, age, time, category);		
+	
 	
 
 }
