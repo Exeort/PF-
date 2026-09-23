@@ -1,1 +1,61 @@
+#include <iostream>
+using namespace std;
 
+
+
+
+
+
+
+int main()
+{
+	string name;
+    double age, time;
+    char category;
+    
+    
+    cout << "Enter Patient's name: ";
+    cin >> name;
+    cout << "Enter Patient's age: ";
+    cin >> age;
+    cout << "Enter Arrival Time (24 hour format/0000): ";
+    cin >> time;
+    cout << "Enter Patient's category (E-Emergency/S-Senior/N-Normal): ";
+    cin >> category;
+   
+    
+    switch (category){
+    	case 'E':
+    		cout << "Your name is " << name << endl;
+    		cout << "Your age is " << age << endl;
+    		cout << "You arrived at " << time << endl;
+    		cout << "Your Queue Category is Emergency" << endl;
+    		cout << "Your Queue number is 1" << endl;
+    		cout << "Priority = Highest"; 
+    		break;
+        case 'S':
+        	cout << "Your name is " << name << endl;
+        	cout << "Your age is " << age << endl;
+        	cout << "You arrived at " << time << endl;
+        	cout << "Your Queue Category is Senior" << endl;
+        	cout << "Your Queue number is 2" << endl;
+        	cout << "Priority = Second";
+        	break;
+        case 'N':
+            cout << "Your name is " << name << endl;
+        	cout << "Your age is " << age << endl;
+        	cout << "You arrived at " << time << endl;
+        	cout << "Your Queue Category is Normal" << endl;
+        	cout << "Your Queue number is 3" << endl;
+        	cout << "Priority = Standard";
+        	break;
+        default:;
+        	cout << "Invalid Category";
+            break;
+        }
+    
+    
+    return 0;
+    
+    
+}
