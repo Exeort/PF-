@@ -1,1 +1,82 @@
+MODULE displayPatient(namePatient, agePatient, timePatient, category)
+    PRINT "====== Patient Detail ======"
+    PRINT "Patient name   : ", namePatient
+    PRINT "Patient age    : ", agePatient
+    PRINT "Patient arrive : ", timePatient
+    PRINT "============================"
 
+    CONVERT category TO LOWERCASE
+    
+    SWITCH (category)
+        CASE 'e':
+            PRINT "Category : Emergency"
+            PRINT "Queue    : 1"
+            PRINT "Priority : Highest"
+        CASE 's':
+            PRINT "Category : Senior Citizen"
+            PRINT "Queue    : 2"
+            PRINT "Priority : Standard"
+        CASE 'n':
+            PRINT "Category : Normal"
+            PRINT "Queue    : 3"
+            PRINT "Priority : Lowest"
+        DEFAULT:
+            PRINT "Category : INVALID"
+    END SWITCH
+
+    PRINT "============================"
+END MODULE
+
+
+MAIN ALGORITHM
+    DECLARE name AS STRING = ""
+    DECLARE age AS DOUBLE = 0
+    DECLARE time AS DOUBLE = 0
+    DECLARE category AS CHAR = ' '
+    DECLARE choice AS INTEGER
+    DECLARE hasData AS BOOLEAN = FALSE
+
+    DO
+        PRINT "=============================="
+        PRINT "     PATIENT QUEUE SYSTEM"
+        PRINT "=============================="
+        PRINT "1. Enter Patient Details"
+        PRINT "2. Display Patient Details"
+        PRINT "3. Exit"
+        PRINT "=============================="
+        PRINT "Enter your choice : "
+        READ choice
+
+        SWITCH (choice)
+            CASE 1:
+                CLEAR INPUT BUFFER
+                PRINT "Enter patient name : "
+                READ LINE name
+                
+                PRINT "Enter patient age : "
+                READ age
+                
+                PRINT "Enter arrival time (24 HOUR FORMAT/0000) : "
+                READ time
+                
+                PRINT "Enter patient category (e-Emergency / s-Senior Citizen / n-Normal) : "
+                READ category
+                
+                SET hasData = TRUE
+            
+            CASE 2:
+                IF hasData IS TRUE THEN
+                    CALL MODULE displayPatient(name, age, time, category)
+                ELSE
+                    PRINT "[!] No patient details entered yet! Please choose option 1 first."
+                END IF
+            
+            CASE 3:
+                PRINT "Thank you for using our system!"
+            
+            DEFAULT:
+                PRINT "Please enter (1/2/3) only!"
+        END SWITCH
+
+    WHILE (choice != 3)
+END MAIN
